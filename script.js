@@ -36,5 +36,4 @@ async function activateXR() {
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
     const gl = canvas.getContext("webgl", { xrCompatible: true });
-    alert("XR canvas создан. Далее можешь внедрять полноценный WebXR.");
 }
