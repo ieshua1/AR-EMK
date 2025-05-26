@@ -25,8 +25,8 @@ async function checkARSupport() {
         }
     }
 
-    statusEl.innerText =
-        "❌ Ваше устройство не поддерживает AR. Только 3D просмотр.";
+    statusEl.innerHTML =
+        "❌ Ваше устройство/браузер не поддерживает AR. Только 3D просмотр. <a href='why.html'>Почему так?</a>";
     return false;
 }
 
