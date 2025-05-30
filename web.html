@@ -1,42 +1,41 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Кабинет WEB-технологий</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кабинет WEB-технологий</title>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-        <script
-            type="module"
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-        ></script>
+    <link rel="stylesheet" href="style.css" />
 
-    </head>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
 
-    <body>
-        <a href="index.html" class="back-button">← Назад</a>
-        <div id="ar-support-status">Проверка поддержки AR...</div>
+  <body>
+    <a href="index.html" class="back-button">← Назад</a>
 
-        <model-viewer
-            src="./models/web-technology.glb"
-            ios-src="./models/web-technology.usdz"
-            alt="Кабинет ВЕБ-Технологий"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            auto-rotate
-            camera-controls
-            shadow-intensity="1"
-            environment-image="neutral"
-        >
-        </model-viewer>
+    <div id="ar-support-status">Проверка поддержки AR...</div>
 
-        <button onclick="activateXR()">Запустить</button>
-        <script src="./script.js"></script>
+    <model-viewer
+      src="./models/web-technology.glb"
+      ios-src="./models/web-technology.usdz"
+      alt="Кабинет ВЕБ-Технологий"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      auto-rotate
+      camera-controls
+      shadow-intensity="1"
+      environment-image="neutral"
+    >
+    </model-viewer>
 
-    </body>
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -1,42 +1,30 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Кабинет Электромонтажа</title>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кабинет Электромонтажа</title>
 
-        <script
-            type="module"
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-        ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 
-    </head>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-    <body>
-        <a href="index.html" class="back-button">← Назад</a>
-        <div id="ar-support-status">Проверка поддержки AR...</div>
+</head>
 
-        <model-viewer
-            src="./models/electro.glb"
-            ios-src="./models/electro.usdz"
-            alt="Кабинет Электромонтажа"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            auto-rotate
-            camera-controls
-            shadow-intensity="1"
-            environment-image="neutral"
-        >
-        </model-viewer>
+<body>
+    <a href="index.html" class="back-button">← Назад</a>
+    <div id="ar-support-status">Проверка поддержки AR...</div>
 
-        <button onclick="activateXR()">Запустить</button>
-        <script src="./script.js"></script>
+    <model-viewer src="./models/electro.glb" ios-src="./models/electro.usdz" alt="Кабинет Электромонтажа" ar
+        ar-modes="scene-viewer webxr quick-look" auto-rotate camera-controls shadow-intensity="1"
+        environment-image="neutral">
+    </model-viewer>
 
-    </body>
+
+    <script src="./script.js"></script>
+
+</body>
+
 </html>

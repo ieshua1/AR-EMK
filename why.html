@@ -1,100 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Почему AR не работает?</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
-    }
-    h2 {
-      margin-top: 2em;
-      color: #444;
-    }
-    ul {
-      padding-left: 1.2em;
-    }
-    .note {
-      background: #fff8dc;
-      padding: 10px;
-      border-left: 4px solid orange;
-      margin: 1em 0;
-    }
-    code {
-      background: #eee;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body>
-        <a href="index.html" class="back-button">← Назад</a>
-  <h1>Почему AR (дополненная реальность) может не работать?</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Почему AR не работает?</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        margin-top: 2em;
+        color: #444;
+      }
+      ul {
+        padding-left: 1.2em;
+      }
+      .note {
+        background: #fff8dc;
+        padding: 10px;
+        border-left: 4px solid orange;
+        margin: 1em 0;
+      }
+      code {
+        background: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-button">← Назад</a>
+    <h1>Почему AR (дополненная реальность) может не работать?</h1>
 
-  <p>AR (дополненная реальность) – это здорово, но иногда она может не работать на вашем телефоне или планшете. Давайте разберемся, почему так бывает и что можно попробовать сделать.</p>
+    <p>
+      AR (дополненная реальность) – это здорово, но иногда она может не работать
+      на вашем телефоне или планшете. Давайте разберемся, почему так бывает и
+      что можно попробовать сделать.
+    </p>
 
-  <h2>1. Ваш браузер – ключ к AR</h2>
-  <p>Чтобы AR заработала прямо на сайте, ваш интернет-браузер (программа, через которую вы выходите в интернет) должен поддерживать специальные современные технологии. Одна из таких технологий называется <strong>WebXR</strong>.</p>
-  <p>Если сайт пытается показать AR способом, который требует WebXR (иногда это обозначается технически как <code>ar-modes="webxr"</code>), то браузер должен "понимать" эту технологию.</p>
+    <h2>1. Ваш браузер – ключ к AR</h2>
+    <p>
+      Чтобы AR заработала прямо на сайте, ваш интернет-браузер (программа, через
+      которую вы выходите в интернет) должен поддерживать специальные
+      современные технологии. Одна из таких технологий называется
+      <strong>WebXR</strong>.
+    </p>
+    <p>
+      Если сайт пытается показать AR способом, который требует WebXR (иногда это
+      обозначается технически как <code>ar-modes="webxr"</code>), то браузер
+      должен "понимать" эту технологию.
+    </p>
 
-  <div class="note">
-    <strong>Какие браузеры обычно поддерживают WebXR для AR:</strong>
+    <div class="note">
+      <strong>Какие браузеры обычно поддерживают WebXR для AR:</strong>
+      <ul>
+        <li>Google Chrome (на Android)</li>
+        <li>Samsung Internet (на Android)</li>
+        <li>Microsoft Edge (на некоторых устройствах)</li>
+      </ul>
+      <strong>Какие часто НЕ поддерживают WebXR для AR:</strong> Safari (на
+      iPhone/iPad) и Firefox. У них свои особенности.
+    </div>
+
+    <h2>2. Не все браузеры одинаково хороши для AR</h2>
+    <p>
+      Некоторые браузеры просто не умеют показывать AR через WebXR, или эта
+      функция у них отключена. Например:
+    </p>
     <ul>
-      <li>Google Chrome (на Android)</li>
-      <li>Samsung Internet (на Android)</li>
-      <li>Microsoft Edge (на некоторых устройствах)</li>
+      <li>
+        <strong>Safari (на iPhone и iPad)</strong>: У Apple свой способ
+        показывать AR, он называется Quick Look (об этом ниже). WebXR он не
+        использует для AR.
+      </li>
+      <li>
+        <strong>Firefox</strong>: Пока не поддерживает технологию WebXR для AR.
+      </li>
+      <li>
+        <strong>Обычный "Интернет" браузер на Android</strong>: Иногда это
+        старая версия, которая тоже не поддерживает WebXR.
+      </li>
     </ul>
-    <strong>Какие часто НЕ поддерживают WebXR для AR:</strong> Safari (на iPhone/iPad) и Firefox. У них свои особенности.
-  </div>
 
-  <h2>2. Не все браузеры одинаково хороши для AR</h2>
-  <p>
-    Некоторые браузеры просто не умеют показывать AR через WebXR, или эта функция у них отключена. Например:
-  </p>
-  <ul>
-    <li><strong>Safari (на iPhone и iPad)</strong>: У Apple свой способ показывать AR, он называется Quick Look (об этом ниже). WebXR он не использует для AR.</li>
-    <li><strong>Firefox</strong>: Пока не поддерживает технологию WebXR для AR.</li>
-    <li><strong>Обычный "Интернет" браузер на Android</strong>: Иногда это старая версия, которая тоже не поддерживает WebXR.</li>
-  </ul>
+    <h2>3. Ваш телефон или планшет тоже важен</h2>
+    <p>
+      Даже если браузер подходящий, само устройство должно быть готово к AR. Ему
+      нужны:
+    </p>
+    <ul>
+      <li>Камера (чтобы "видеть" мир вокруг)</li>
+      <li>Специальные сенсоры (чтобы понимать, как вы двигаете телефон)</li>
+      <li>
+        Поддержка AR от производителя: <strong>ARCore</strong> для
+        Android-устройств или <strong>ARKit</strong> для iPhone/iPad.
+      </li>
+    </ul>
 
-  <h2>3. Ваш телефон или планшет тоже важен</h2>
-  <p>
-    Даже если браузер подходящий, само устройство должно быть готово к AR. Ему нужны:
-  </p>
-  <ul>
-    <li>Камера (чтобы "видеть" мир вокруг)</li>
-    <li>Специальные сенсоры (чтобы понимать, как вы двигаете телефон)</li>
-    <li>Поддержка AR от производителя: <strong>ARCore</strong> для Android-устройств или <strong>ARKit</strong> для iPhone/iPad.</li>
-  </ul>
+    <h2>4. Особенности для Apple (iPhone/iPad)</h2>
+    <p>
+      На устройствах Apple (iPhone, iPad) дополненная реальность работает
+      по-своему, через технологию <strong>Quick Look</strong>. Это означает,
+      что:
+    </p>
+    <ul>
+      <li>AR обычно доступна только в браузере <strong>Safari</strong>.</li>
+      <li>
+        Чтобы AR сработала, сайт должен предоставить 3D-модель в специальном
+        формате, который "понимает" Apple (это файлы с расширением
+        <code>.usdz</code>). Вам, как пользователю, ничего специально с этими
+        файлами делать не нужно – Safari сам их использует, если сайт все
+        правильно настроил.
+      </li>
+    </ul>
 
-  <h2>4. Особенности для Apple (iPhone/iPad)</h2>
-  <p>
-    На устройствах Apple (iPhone, iPad) дополненная реальность работает по-своему, через технологию <strong>Quick Look</strong>. Это означает, что:
-  </p>
-  <ul>
-    <li>AR обычно доступна только в браузере <strong>Safari</strong>.</li>
-    <li>Чтобы AR сработала, сайт должен предоставить 3D-модель в специальном формате, который "понимает" Apple (это файлы с расширением <code>.usdz</code>). Вам, как пользователю, ничего специально с этими файлами делать не нужно – Safari сам их использует, если сайт все правильно настроил.</li>
-  </ul>
-
-  <h2>Что можно сделать?</h2>
-  <ul>
-    <li><strong>На Android:</strong> Попробуйте открыть сайт в браузере <strong>Google Chrome</strong> или <strong>Samsung Internet</strong>. Убедитесь, что ваш телефон поддерживает AR (см. списки ниже).</li>
-    <li><strong>На iPhone/iPad:</strong> Используйте браузер <strong>Safari</strong>. Если сайт правильно подготовил AR-опыт для устройств Apple, он должен запуститься автоматически.</li>
-    <li><strong>Проверьте устройство:</strong> Убедитесь, что ваш телефон или планшет в принципе поддерживает AR.
+    <h2>Что можно сделать?</h2>
+    <ul>
+      <li>
+        <strong>На Android:</strong> Попробуйте открыть сайт в браузере
+        <strong>Google Chrome</strong> или <strong>Samsung Internet</strong>.
+        Убедитесь, что ваш телефон поддерживает AR (см. списки ниже).
+      </li>
+      <li>
+        <strong>На iPhone/iPad:</strong> Используйте браузер
+        <strong>Safari</strong>. Если сайт правильно подготовил AR-опыт для
+        устройств Apple, он должен запуститься автоматически.
+      </li>
+      <li>
+        <strong>Проверьте устройство:</strong> Убедитесь, что ваш телефон или
+        планшет в принципе поддерживает AR.
         <ul>
-            <li>Для Android: список устройств с <a href="https://developers.google.com/ar/devices" target="_blank" rel="noopener">поддержкой ARCore от Google</a>.</li>
-            <li>Для iOS (Apple): практически все современные iPhone и iPad поддерживают <a href="https://developer.apple.com/augmented-reality/arkit/" target="_blank" rel="noopener">ARKit</a>.</li>
+          <li>
+            Для Android: список устройств с
+            <a
+              href="https://developers.google.com/ar/devices"
+              target="_blank"
+              rel="noopener"
+              >поддержкой ARCore от Google</a
+            >.
+          </li>
+          <li>
+            Для iOS (Apple): практически все современные iPhone и iPad
+            поддерживают
+            <a
+              href="https://developer.apple.com/augmented-reality/arkit/"
+              target="_blank"
+              rel="noopener"
+              >ARKit</a
+            >.
+          </li>
         </ul>
-    </li>
-  </ul>
-</body>
+      </li>
+    </ul>
+  </body>
 </html>
